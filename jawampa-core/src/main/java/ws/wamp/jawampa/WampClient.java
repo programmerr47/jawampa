@@ -173,6 +173,10 @@ public class WampClient {
     public Observable<State> statusChanged() {
         return stateController.statusObservable();
     }
+
+    public State currentState() {
+        return stateController.currentExternalState();
+    }
     
     /**
      * Publishes an event under the given topic.

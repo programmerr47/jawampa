@@ -70,6 +70,10 @@ public class StateController {
         extState = newState;
         statusObservable.onNext(extState);
     }
+
+    public State currentExternalState() {
+        return extState;
+    }
     
     public void setCloseError(Throwable closeError) {
         this.closeError = closeError;
